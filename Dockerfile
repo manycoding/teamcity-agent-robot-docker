@@ -1,6 +1,7 @@
 FROM ubuntu:14.04
 
-ENV AGENT_DIR  /opt/buildAgent
+ENV AGENT_DIR /opt/buildAgent
+ENV AGENT_NAME firefox-esr
 
 RUN apt-get update \
 	&& apt-get install -y --no-install-recommends \

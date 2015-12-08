@@ -1,6 +1,6 @@
 #!/bin/bash
 if [ -z "$TEAMCITY_SERVER" ]; then
-    echo "TEAMCITY_SERVER variable not set, launch with -e TEAMCITY_SERVER=http://mybuildserver"
+    echo "TEAMCITY_SERVER variable is not set, launch with -e TEAMCITY_SERVER=http://mybuildserver"
     exit 1
 fi
 
@@ -17,7 +17,7 @@ if [ ! -d "$AGENT_DIR/bin" ]; then
     done
     wget $TEAMCITY_SERVER/update/buildAgent.zip && unzip -d $AGENT_DIR buildAgent.zip && rm buildAgent.zip
     chmod +x $AGENT_DIR/bin/agent.sh
-    echo "serverUrl=${TEAMCITY_SERVER}" > $AGENT_DIR/conf/buildAgent.properties
+    echo "serverUrl=${TEAMCITY_SERVER}\nname="$AGENT_NAME"" > $AGENT_DIR/conf/buildAgent.properties
 fi
 
 echo "Starting buildagent..."
