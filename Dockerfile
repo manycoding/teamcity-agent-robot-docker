@@ -70,7 +70,7 @@ ENV FIREFOX_VERSION 38.4.0esr
 WORKDIR /tmp
 RUN curl -sSL "https://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${FIREFOX_VERSION}/linux-x86_64/en-US/firefox-${FIREFOX_VERSION}.tar.bz2" | tar -xj \
     && mv /usr/bin/firefox /usr/bin/firefox_prev \
-    && ln -s /tmp/firefox/firefox /usr/bin/firefox> > 
+    && ln -s /tmp/firefox/firefox /usr/bin/firefox 
 
 # Install pip and robot libraries
 COPY requirements.txt /tmp/
