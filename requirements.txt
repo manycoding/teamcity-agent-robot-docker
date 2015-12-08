@@ -1,0 +1,5 @@
+pip
+robotframework
+robotframework-pabot
+robotframework-ftplibrary
+robotframework-selenium2library
