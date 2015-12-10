@@ -17,10 +17,10 @@ if [ ! -d "$AGENT_DIR/bin" ]; then
     done
     wget $TEAMCITY_SERVER/update/buildAgent.zip && unzip -d $AGENT_DIR buildAgent.zip && rm buildAgent.zip
     chmod +x $AGENT_DIR/bin/agent.sh
-    echo -e "serverUrl=${TEAMCITY_SERVER}\nname=$AGENT_NAME" > $AGENT_DIR/conf/buildAgent.properties
+    echo "serverUrl=${TEAMCITY_SERVER}\nname="$AGENT_NAME"" > $AGENT_DIR/conf/buildAgent.properties
 fi
 
-echo "Starting build agent..."
+echo "Starting buildagent..."
 chown -R teamcity:teamcity /opt/buildAgent
 
 wrapdocker gosu teamcity /opt/buildAgent/bin/agent.sh run
