@@ -6,9 +6,6 @@ When starting the image as a container you must set the TEAMCITY_SERVER environm
 ```
 docker run -e TEAMCITY_SERVER=http://localhost:8111
 ```
-
-Optionally you can specify your own address using the `TEAMCITY_OWN_ADDRESS` variable.
-
 Linking example
 --------
 ```
