@@ -1,7 +1,7 @@
 FROM ubuntu:14.04
 
 ENV AGENT_DIR /opt/buildAgent
-ENV AGENT_NAME firefox-esr
+ENV AGENT_NAME firefox_esr
 
 RUN apt-get update \
 	&& apt-get install -y --no-install-recommends \
@@ -58,7 +58,7 @@ RUN gem install rake bundler compass --no-ri --no-rdoc
 # Install the magic wrapper.
 ADD wrapdocker /usr/local/bin/wrapdocker
 
-# Instal firefox & pyp
+# Instal firefox & xvfb
 RUN apt-get update && apt-get install -y --no-install-recommends \
     xvfb \
     firefox \
@@ -84,6 +84,5 @@ ENTRYPOINT ["/docker-entrypoint.sh"]
 
 VOLUME /var/lib/docker
 VOLUME /opt/buildAgent
-
 
 EXPOSE 9090
