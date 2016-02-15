@@ -20,6 +20,8 @@ if [ ! -d "$AGENT_DIR/bin" ]; then
     echo -e "serverUrl=$TEAMCITY_SERVER\nname=$AGENT_NAME" > $AGENT_DIR/conf/buildAgent.properties
 fi
 
+git config --global http.sslVerify false
+
 echo "Starting build agent..."
 chown -R teamcity:teamcity /opt/buildAgent
 
