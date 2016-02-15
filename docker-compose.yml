@@ -3,10 +3,14 @@ server:
   ports:
     - 8111:8111
   volumes:
-    - ./teamcity-storage:/var/lib/teamcity
+    - /run/media/toaster/backup1/teamcity:/var/lib/teamcity
 agent:
   image: manycoding/teamcity-agent-robotframework
   links:
     - server
   environment:
-    TEAMCITY_SERVER: http://server:8111
+    TEAMCITY_SERVER: http://covert-muffin.moscow-lux.ru.ibm.com:8111/
+database:
+  image: postgres
+  links:
+    - server

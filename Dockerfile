@@ -65,7 +65,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && apt-get clean autoclean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-ENV FIREFOX_VERSION 38.4.0esr
+ENV FIREFOX_VERSION 38.6.1esr
 
 WORKDIR /tmp
 RUN curl -sSL "https://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${FIREFOX_VERSION}/linux-x86_64/en-US/firefox-${FIREFOX_VERSION}.tar.bz2" | tar -xj \
