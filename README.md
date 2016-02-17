@@ -1,6 +1,8 @@
 Teamcity build agent with headless Robot Framework
 ========================
-Thanks to https://github.com/sjoerdmulder, it's a bit modified https://github.com/sjoerdmulder/teamcity-agent-docker image containing necessary tools to run Robot Framework tests in headless Firefox ESR.
+Thanks to https://github.com/sjoerdmulder, it's a container based on https://github.com/sjoerdmulder/teamcity-agent-docker image containing necessary tools to run Robot Framework tests in headless Firefox ESR.
+
+Update requirements.txt to include pip packages that you want.
 
 When starting the image as a container you must set the TEAMCITY_SERVER environment variable to point to the teamcity server e.g.
 ```
