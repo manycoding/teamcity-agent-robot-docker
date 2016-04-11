@@ -1,5 +1,6 @@
 Teamcity build agent with headless Robot Framework
 ========================
+[![](https://badge.imagelayers.io/manycoding/teamcity-agent-robotframework:latest.svg)](https://imagelayers.io/?images=manycoding/teamcity-agent-robotframework:latest 'Get your own badge on imagelayers.io')
 Thanks to https://github.com/sjoerdmulder, it's a container based on https://github.com/sjoerdmulder/teamcity-agent-docker image containing necessary tools to run Robot Framework tests in headless Firefox ESR.
 
 Update requirements.txt to include pip packages that you want.

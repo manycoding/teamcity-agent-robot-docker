@@ -17,7 +17,7 @@ if [ ! -d "$AGENT_DIR/bin" ]; then
     done
     wget $TEAMCITY_SERVER/update/buildAgent.zip && unzip -d $AGENT_DIR buildAgent.zip && rm buildAgent.zip
     chmod +x $AGENT_DIR/bin/agent.sh
-    echo -e "serverUrl=$TEAMCITY_SERVER\nname=$AGENT_NAME" > $AGENT_DIR/conf/buildAgent.properties
+    echo -e "serverUrl=$TEAMCITY_SERVER\nname=$AGENT_NAME\nteamcity.magic.authorizationToken='kla^Q59hznR8AvT$ziY!Co3wVbH6mQqnfF9ywrnAP5$w&Rkkz@'" > $AGENT_DIR/conf/buildAgent.properties
 fi
 
 git config --global http.sslVerify false
