@@ -12,5 +12,5 @@ docker run -e TEAMCITY_SERVER=http://localhost:8111
 Linking example
 --------
 ```
-docker run -d --name=teamcity_agent_firefoxesr --link teamcity:teamcity --privileged -e TEAMCITY_SERVER=http://localhost:8111 -e AGENT_NAME=firefox_esr manycoding/teamcity-agent-robotframework:latest
+docker run -d --name=firefox_esr_temp --link teamcity:teamcity --privileged -e TEAMCITY_SERVER=$TEAMCITY_SERVER -e AGENT_NAME=firefox_esr manycoding/teamcity-agent-robotframework:latest
 ```
