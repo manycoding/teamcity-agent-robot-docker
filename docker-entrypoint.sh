@@ -5,13 +5,13 @@ if [ -z "$TEAMCITY_SERVER" ]; then
 fi
 
 if [ ! -d "$AGENT_DIR/bin" ]; then
-    echo "$AGENT_DIR doesn't exist pulling build-agent from server $TEAMCITY_SERVER";
+    echo "$AGENT_DIR doesn't exist, pulling build-agent from $TEAMCITY_SERVER/update/buildAgent.zip";
     let waiting=0
     until curl -s -f -I -X GET $TEAMCITY_SERVER/update/buildAgent.zip; do
         let waiting+=3
         sleep 3
         if [ $waiting -eq 120 ]; then
-            echo "Teamcity server did not respond within 120 seconds"...
+            echo "Teamcity server did not respond within 120 seconds..."
             exit 42
         fi
     done
