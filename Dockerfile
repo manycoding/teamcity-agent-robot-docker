@@ -1,6 +1,6 @@
 FROM sjoerdmulder/teamcity-agent
 
-MAINTAINER Valery Mukhtarulin <vamukhs@gmail.com>
+MAINTAINER Valery M. <vamukhs@gmail.com>
 
 ENV AGENT_NAME firefox_esr
 ENV DEBIAN_FRONTEND noninteractive
